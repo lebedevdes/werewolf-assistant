@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Вход</h1>
+
+    {% if next %}
+        <form action="{% url "login" %}?next={{ next }}" method="post">
+{#        <form action="{% url "login" %}" method="post"></form>#}
+    {% else %}
+        <form action="{% url "login" %}" method="post">
+{#        <form action="{% url "login" %}" method="post"></form>#}
+    {% endif %}
+        {% csrf_token %}
+        {{ form }}
+
+        <input id="submit-btn" type="submit" value="Отправить">
+{#        <input type="hidden" name="next" value="{{ next }}">#}
+        </form>
+{% endblock %}

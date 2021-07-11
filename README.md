@@ -12,3 +12,4 @@ This project is web assistant for tabletop role-playing game Werewolf: The Forsa
 * Install Python 3.9.5
 * Install dependencies via `pip install -r requirements.txt`
 * Download bootstrap and move to assistant/static/bootstrap
+* Run `python manage.py migrate` into source directory

@@ -10,4 +10,5 @@ venv/
 
 
 assistant/static/bootstrap/
+frontend/node_modules/
 db.sqlite3
