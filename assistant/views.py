@@ -1,19 +1,15 @@
-from django.conf import settings
-from django.shortcuts import render, redirect
-from django.views import View
+from rest_framework import generics
+
+from .models import Uratha
+from .serializers import UrathaSerializer
 
 
-class Index(View):
-    """Title page"""
-
-    def get(self, request):
-        return render(request, "index.html")
-
-
-class Character(View):
-    """Персонаж"""
-
-    def get(self, request):
-        if not request.user.is_authenticated:
-            return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
-        return render(request, "character.html")
+class UrathaListCreate(generics.ListCreateAPIView):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = Uratha.objects.all()
+    serializer_class = UrathaSerializer
+    # queryset = User.objects.all().order_by('-date_joined')
+    # serializer_class = UserSerializer
+    # permission_classes = [permissions.IsAuthenticated]
