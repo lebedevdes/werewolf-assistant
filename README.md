@@ -5,11 +5,22 @@ This project is web assistant for tabletop role-playing game Werewolf: The Forsa
 ### System dependencies
 
 * Python 3.9.5
-* Bootstrap v5.0.2
+* NodeJS v16.4.2
+* npm v7.18.1
 
 ### Installation
 
 * Install Python 3.9.5
 * Install dependencies via `pip install -r requirements.txt`
-* Download bootstrap and move to assistant/static/bootstrap
 * Run `python manage.py migrate` into source directory
+* Install nmv (check source for additional information https://github.com/nvm-sh/nvm)
+* Install nodejs via `nvm install node`
+* In `./frontend` directory run `npm init -y`
+* Run `npm i webpack webpack-cli --save-dev`
+* Run `npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev`
+* Run `npm i react react-dom --save-dev`
+
+### Startup
+
+* In `./frontend` directory run `npm run dev`
+* In root directory run `python manage.py runserver`
