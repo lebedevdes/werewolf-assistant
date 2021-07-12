@@ -1,11 +1,17 @@
 module.exports = {
+  resolve: {
+    extensions: [".ts", ".tsx", ".mjs", ".js", ".json"],
+    alias: {
+      "react-dom": "@hot-loader/react-dom",
+    },
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.tsx$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: "ts-loader"
         }
       }
     ]
