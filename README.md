@@ -16,9 +16,7 @@ This project is web assistant for tabletop role-playing game Werewolf: The Forsa
 * Install nmv (check source for additional information https://github.com/nvm-sh/nvm)
 * Install nodejs via `nvm install node`
 * In `./frontend` directory run `npm init -y`
-* Run `npm i webpack webpack-cli --save-dev`
-* Run `npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev`
-* Run `npm i react react-dom --save-dev`
+* Run `npm i`
 
 ### Startup
 
