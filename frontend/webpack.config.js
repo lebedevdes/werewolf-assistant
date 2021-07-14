@@ -1,4 +1,23 @@
+const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
+
+const staticPath = path.resolve(__dirname, './static');
+const assetPath = path.resolve(__dirname, './asset');
 module.exports = {
+  entry: {
+    main: path.resolve(__dirname, './src/index.tsx')
+  },
+  output: {
+    path: staticPath,
+    filename: 'index.bundle.js'
+  },
+  plugins: [
+    new CopyPlugin({
+      patterns: [
+        { from: assetPath, to: staticPath }
+      ]
+    })
+  ],
   resolve: {
     extensions: ['.ts', '.tsx', '.mjs', '.js', '.json'],
     alias: {
@@ -21,6 +40,24 @@ module.exports = {
             },
             loader: require.resolve('eslint-loader')
           }
+        ]
+      },
+      {
+        test: /\.(sass|css|scss)$/,
+        exclude: /node_modules/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'sass-loader' }
+        ]
+      },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'sass-loader' }
         ]
       }
     ]
