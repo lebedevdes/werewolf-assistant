@@ -14,11 +14,11 @@ This project is web assistant for tabletop role-playing game Werewolf: The Forsa
 * Install dependencies via `pip install -r requirements.txt`
 * Run `python manage.py migrate` into source directory
 * Install nmv (check source for additional information https://github.com/nvm-sh/nvm)
-* Install nodejs via `nvm install node`
+* Install nodejs via `nvm install v16`
 * In `./frontend` directory run `npm init -y`
 * Run `npm i`
 
 ### Startup
 
 * In `./frontend` directory run `npm run dev`
-* In root directory run `python manage.py runserver`
+* In root directory run `python manage.py runserver 0.0.0.0:8000`
