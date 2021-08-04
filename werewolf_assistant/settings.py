@@ -131,8 +131,9 @@ STATIC_URL = "/static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# AuthView urls
+# Pagination
 
-LOGIN_URL = "/login/"
-
-LOGOUT_REDIRECT_URL = "/"
+# REST_FRAMEWORK = {
+#     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+#     'PAGE_SIZE': 10
+# }

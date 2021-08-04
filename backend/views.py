@@ -1,12 +1,12 @@
-from rest_framework import generics
+from rest_framework import viewsets
 
 from .models import Uratha
 from .serializers import UrathaSerializer
 
 
-class UrathaListCreate(generics.ListCreateAPIView):
+class UrathaViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows users to be viewed or edited.
+    API endpoint that allows Urathas to be viewed or edited.
     """
     queryset = Uratha.objects.all()
     serializer_class = UrathaSerializer

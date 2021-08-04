@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import Human, Supernatural, Uratha
 
 
-class HumanSerializer(serializers.ModelSerializer):
+class HumanSerializer(serializers.HyperlinkedModelSerializer):
     """Json serialization for Human model"""
     class Meta:
         model = Human
