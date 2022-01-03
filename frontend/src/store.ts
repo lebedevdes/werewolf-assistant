@@ -1,14 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { IState } from './store/IStore';
+import userReducer from './features/userSlice';
+import characterReducer from './features/characterSlice';
 
-export default configureStore<IState>({
-  reducer: (state) => {
-    return state;
-  },
-  preloadedState: {
-    user: {
-      id: 'test',
-      name: 'UserName'
-    }
+const store = configureStore({
+  reducer: {
+    user: userReducer,
+    characters: characterReducer
   }
 });
+
+export default store;
+export type RootState = ReturnType<typeof store.getState>;

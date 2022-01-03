@@ -1,7 +1,9 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import { Link } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
+import CharacterSelector from './components/page/CharacterSelector/CharacterSelector';
+import CharacterView from './components/page/CharacterView/CharacterView';
 
 function App () {
   return (
@@ -21,6 +23,10 @@ function App () {
           <Nav.Link to="/characters" as={Link}>Characters</Nav.Link>
         </Nav>
       </Navbar>
+      <Switch>
+        <Route exact path='/characters' component={ CharacterSelector }/>
+        <Route exact path='/characters/:id' component={ CharacterView }/>
+      </Switch>
     </div>
   );
 }

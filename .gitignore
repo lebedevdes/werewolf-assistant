@@ -9,7 +9,7 @@ venv/
 .project
 
 frontend/node_modules/
-frontend/static/frontend
+frontend/static/
 
 db.sqlite3
 

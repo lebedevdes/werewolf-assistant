@@ -1,0 +1,13 @@
+.bar-container {
+  grid-template-columns: repeat(auto-fill, 28px);
+  grid-template-rows: repeat(auto-fill, 28px);
+}
+
+.bar-dot {
+  width: 22px;
+  height: 22px;
+}
+
+.bar__dot__filled {
+  background-color: var(--bs-dark);
+}
