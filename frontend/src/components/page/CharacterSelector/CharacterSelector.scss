@@ -1,0 +1,6 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/_variables";
+
+.page-characterSelector {
+  max-width: map-get($container-max-widths, sm);
+}

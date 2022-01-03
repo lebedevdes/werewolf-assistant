@@ -1,0 +1,18 @@
+@import '../../../theme/variables';
+.healthBar-container {
+  grid-template-columns: repeat(auto-fill, 28px);
+}
+
+.healthBar-dot {
+  width: 22px;
+  height: 22px;
+}
+.healthBar__dot_a {
+  background-color: var(--aggravated-damage-color);
+}
+.healthBar__dot_l {
+  background-color: var(--lethal-damage-color);
+}
+.healthBar__dot_b {
+  background-color: var(--bashing-damage-color);
+}
